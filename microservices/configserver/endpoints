@@ -1,0 +1,21 @@
+http://localhost:8071/accounts/prod
+http://localhost:8071/accounts/dev
+
+
+http://localhost:8071/cards/prod
+http://localhost:8071/cards/dev
+http://localhost:8071/cards/default
+
+
+POST
+http://localhost:8071/encrypt
+	Input : key
+	output : encrypted data
+
+POST
+http://localhost:8071/decrypt
+	Input : encrypted data
+	output : real value
+
+
+	
