@@ -1,0 +1,10 @@
+http://localhost:8072/actuator
+
+http://localhost:8072/actuator/gateway/routes
+
+http://localhost:8072/customexective/accounts/myCustomerDetails
+
+{
+    "customerId" : 1
+}
+

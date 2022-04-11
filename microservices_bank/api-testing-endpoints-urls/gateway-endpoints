@@ -1,0 +1,33 @@
+Gateway Endpoints
+
+POST Request
+-----------------------------------------------------------------
+http://localhost:8072/customexective/accounts/myCustomerDetails
+
+{
+    "customerId" : 1
+}
+
+
+http://localhost:8072/bank/accounts/myCustomerDetails
+
+{
+    "customerId" : 1
+}
+
+
+---------------------------------------------------------
+http://localhost:8072/customexective/accounts/myAccount
+
+{
+    "customerId" : 1
+}
+
+
+http://localhost:8072/bank/accounts/myAccount
+
+{
+    "customerId" : 1
+}
+---------------------------------------------------------
+

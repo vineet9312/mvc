@@ -1,0 +1,9 @@
+Accounts Endpoints
+
+POST Request
+------------
+http://localhost:9000/myLoans
+
+{
+    "customerId" : 1
+}

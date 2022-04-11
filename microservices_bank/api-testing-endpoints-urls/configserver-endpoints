@@ -1,0 +1,24 @@
+
+GET End points
+
+http://localhost:8071/accounts/default
+http://localhost:8071/accounts/dev
+http://localhost:8071/accounts/prod
+
+
+http://localhost:8071/loans/default
+http://localhost:8071/loans/dev
+http://localhost:8071/loans/prod
+
+
+Encrypt 
+
+POST
+http://localhost:8071/encrypt
+	Key Value = Welcome to the JavaExpress Accounts Prod application
+	
+
+POST
+http://localhost:8071/decrypt
+	Encryption value
+	

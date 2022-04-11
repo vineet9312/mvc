@@ -1,0 +1,23 @@
+POST
+http://localhost:8080/myAccount
+
+{
+	"customerId": 1
+}
+
+
+GET
+http://localhost:8080/account/properties
+{
+	"customerId": 1
+}
+
+
+POST
+http://localhost:8080/myCustomerDetails
+{
+	"customerId": 1
+}
+
+
+

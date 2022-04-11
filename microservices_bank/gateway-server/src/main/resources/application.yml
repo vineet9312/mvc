@@ -1,0 +1,46 @@
+info:
+  app:
+    description: JavaExpres Bank Gateway Server Application
+    name: Gateway Server Microservice
+    version: 1.0.0
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 8072
+spring:
+  application:
+    name: gatewayserver
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+        - id: ACCOUNTS
+          uri: lb://accounts
+          predicates:
+            - Path=/customexective/**
+          filters:
+            - RewritePath=/customexective/accounts/(?<segment>.*), /$\{segment}
+        - id: LOANS
+          uri: lb://loans
+          predicates:
+            - Path=/bank/**
+          filters:
+            - RewritePath=/bank/loans/(?<segment>.*), /$\{segment}
+        - id: CARDS
+          uri: lb://cards
+          predicates:
+            - Path=/bank/**
+          filters:
+            - RewritePath=/bank/cards/(?<segment>.*), /$\{segment}
+  config:
+    import: optional:configserver:http://localhost:8071
+    
+  zipkin:
+    base-url: http://localhost:9411/
+
